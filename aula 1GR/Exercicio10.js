@@ -14,7 +14,7 @@ rl.question("Digite seu salario atual: ", (n1) => {
 
     
  
-    const aumento = parseInt(n1)*0.15;
+    const aumento = parseInt(n1)*1.15;
    const novoSalario = parseFloat(aumento)+parseFloat(n1)
     console.log(`Seu salario sera de: R$${novoSalario}`);
  
