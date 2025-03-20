@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;  /* Organiza os elementos em coluna */
+  justify-content: center; /* Alinha os itens verticalmente */
+  align-items: center;     /* Alinha os itens horizontalmente */
+  height: 100vh;           /* Garante que o contêiner ocupe toda a altura da tela */
+  text-align: center;      /* Alinha o texto no centro */
+}
+img{
+  border-radius: 50px;
+  margin: 20px;
+}
+
+.logos{
+  text-align: center;
+}
+
+
+.light {
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.8939950980392157) 100%);
+  color: black;
+  height: 100vh;
+}
+
+.dark {
+  background: rgb(18,31,96);
+  background: radial-gradient(circle, rgba(18,31,96,1) 0%, rgba(125,32,51,0.8939950980392157) 100%);
+  color: white;
+  height: 100vh;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title-about {
+  color: red;
+}
+
+
+
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+
+
+
+
+.glow-on-hover {
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #11111185;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #c71313, #992f2f, #752f2f, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1111117a;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
