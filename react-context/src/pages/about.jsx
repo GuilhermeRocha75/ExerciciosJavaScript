@@ -1,8 +1,10 @@
+import { Link } from "react-router";
+
 export function About() {
   return (
-    <div>
-      <h1>Sobre Mim</h1>
-      <p>Essa é a página sobre.</p>
-    </div>
+    <>
+      <h1 className="title title-about">About</h1>
+      <Link to="/">Home</Link>
+    </>
   );
 }
